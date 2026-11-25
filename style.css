@@ -1,0 +1,395 @@
+:root {
+    --dark: #000000;
+    --gray: #696871;
+    --halo: #e0d8db;
+    --pink: #dab0c0;
+    --topaz: #cc89a6;
+    --juice: #4d3d79;
+    --hour: #281e3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Impact", sans-serif;
+    body {
+    background: linear-gradient(180deg, #f6eef3 0%, #f0eaf4 50%, #ecd6e3 100%);
+    background-attachment: fixed;   /* градиент не «едет» при прокрутке */
+    min-height: 100vh;
+}
+
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ШАПКА */
+
+.header {
+    padding-block: 30px;
+}
+
+.header__container {
+    max-width: 1069px;
+    margin-inline: auto;
+    background-color: #dab0c0;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__list {
+    display: flex;
+    gap: 52px;
+}
+
+ul {
+    list-style: none;
+}
+
+.header__list-link {
+    font-weight: 500;
+    font-family: "Bangers", sans-serif;
+    color: var(--gray);
+}
+
+.header__list-link.active {
+    color: #000000;
+    border-bottom: 3px solid var(--hour);
+    padding-bottom: 10px;
+}
+
+.header__list-link:hover {
+    color: var(--dark);
+}
+
+.header__button {
+    font-weight: 500;
+    font-size: 17px;
+    color: white;
+    padding: 19px 59px;
+    background: var(--juice);
+    border-radius: 10px;
+}
+
+.header__button:hover {
+    opacity: 80%;
+}
+
+/* КАТАЛОГ NLE */
+
+.catalog {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 25px;
+}
+
+.catalog h1 {
+    font-size: 42px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #888;
+    margin-bottom: 55px;
+    letter-spacing: 3px;
+}
+
+/* Сетка каталога: ровно 3 колонки */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+    align-items: start;
+}
+
+.product-card {
+    width: 100%;
+    min-width: 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    background-color: #f8f1f5;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.product-card p {
+    font-weight: bold;
+}
+
+.product-card select,
+.product-card button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.product-card select {
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.product-card button {
+    margin-top: auto;
+}
+
+.add-to-cart {
+    padding: 15px;
+    background: #281e3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-to-cart:hover {
+    background: #4d3d79;
+}
+
+/* Адаптив: 2 колонки на планшете, 1 на телефоне */
+
+@media (max-width: 900px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* КОРЗИНА */
+
+.cart-product {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.cart-product button {
+    padding: 10px 20px;
+    border: none;
+    background: #4d3d79;
+    color: white;
+    cursor: pointer;
+}
+
+/* РЕГИСТРАЦИЯ */
+
+.registration {
+    max-width: 450px;
+    width: 90%;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.registration h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.registration > p {
+    color: var(--gray);
+    margin-bottom: 35px;
+}
+
+.registration__form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.registration__form input {
+    width: 100%;
+    padding: 17px;
+    border: 1px solid #cccccc;
+    background: transparent;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.registration__form button {
+    width: 100%;
+    padding: 18px;
+    background: var(--juice);
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 17px;
+}
+
+.registration__form button:hover {
+    background: var(--topaz);
+}
+
+.registration > a {
+    display: inline-block;
+    margin-top: 25px;
+    color: var(--dark);
+}
+
+/* ОТЗЫВЫ */
+
+.reviews-page {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+}
+
+.reviews-page h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.review-form-section {
+    background: #f8f1f5;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 40px;
+}
+
+.review-form-section h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #444;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #83649b;
+    box-shadow: 0 0 5px rgba(131, 100, 155, 0.3);
+}
+
+.submit-btn {
+    background-color: #83649b;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #6a4e80;
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review-card {
+    background: #f8f1f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.review-author {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.review-stars {
+    color: #f39c12;
+    font-size: 18px;
+}
+
+.review-date {
+    font-size: 12px;
+    color: #888;
+    margin: 0 0 10px 0;
+}
+
+.review-text {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #444;
+    margin: 0;
+}

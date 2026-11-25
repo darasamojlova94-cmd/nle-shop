@@ -1,0 +1,111 @@
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLE</title>
+    <link rel="stylesheet" href="style.css"</head>
+    <link rel="shortcut icon" href="images/favicon.jpg.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+<header class="header">
+    <div class="header__container">
+        <nav class="header__nav">
+            <img src="images/logoipsum.svg" alt="">
+            <ul class="header__list">
+                <li class="header__list-item">
+                    <a class="header__list-link" a href="index.html" href="/">Главная</a>
+                </li>
+                <li class="header__list-item">
+                    <a class="header__list-link" a href="cart.html">Корзина</a>
+                </li>
+                <li class="header__list-item">
+                    <a class="header__list-link" a href="catalog.html">Каталог</a>
+                </li>
+                <li class="header__list-item">
+                    <a class="header__list-link active" a href="reviews.html" href="/">Отзывы</a>
+                </li>
+            <ul>
+                <a class="header__button" a href="registration.html" href="/">Регистрация</a>
+        </nav>
+    </div>
+    <main class="reviews-page">
+    <h1>Отзывы наших покупателей</h1>
+
+    <!-- Форма для добавления отзыва -->
+    <section class="review-form-section">
+        <h2>Оставить отзыв</h2>
+        <form id="reviewForm">
+            <div class="form-group">
+                <label for="userName">Ваше имя:</label>
+                <input type="text" id="userName" placeholder="Например, Иван" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="userRating">Оценка:</label>
+                <select id="userRating" required>
+                    <option value="5">⭐⭐⭐⭐⭐ Отлично (5)</option>
+                    <option value="4">⭐⭐⭐⭐ Хорошо (4)</option>
+                    <option value="3">⭐⭐⭐ Нормально (3)</option>
+                    <option value="2">⭐⭐ Плохо (2)</option>
+                    <option value="1">⭐ Ужасно (1)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="reviewText">Текст отзыва:</label>
+                <textarea id="reviewText" rows="4" placeholder="Поделитесь впечатлениями о товаре NLE..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Отправить отзыв</button>
+        </form>
+    </section>
+
+    <section class="reviews-list" id="reviewsList">
+        <!-- Пример готового отзыва (для красоты) -->
+        <div class="review-card">
+            <div class="review-header">
+                <span class="review-author">Виктория А.С.</span>
+                <span class="review-stars">⭐⭐⭐⭐⭐</span>
+            </div>
+            <p class="review-date">20.11.2026</p>
+            <p class="review-text">Товар пришел быстро, качество хорошее. Рекомендую!!!</p>
+        </div>
+    </section>
+     <section class="reviews-list" id="reviewsList">
+        <!-- Пример готового отзыва (для красоты) -->
+        <div class="review-card">
+            <div class="review-header">
+                <span class="review-author">Ирина В.Ч.</span>
+                <span class="review-stars">⭐⭐⭐⭐⭐</span>
+            </div>
+            <p class="review-date">07.10.2026</p>
+            <p class="review-text">Дочка довольна)))</p>
+        </div>
+    </section>
+    <section class="reviews-list" id="reviewsList">
+        <!-- Пример готового отзыва (для красоты) -->
+        <div class="review-card">
+            <div class="review-header">
+                <span class="review-author">Екатерина К.Н.</span>
+                <span class="review-stars">⭐⭐⭐⭐</span>
+            </div>
+            <p class="review-date">13.10.2026</p>
+            <p class="review-text">вообще брюки хорошие, но размер хромает. вроде выбирала по размерной сетке, а
+вроде всё равно большие..</p>
+        </div>
+    </section>
+    <section class="reviews-list" id="reviewsList">
+        <!-- Пример готового отзыва (для красоты) -->
+        <div class="review-card">
+            <div class="review-header">
+                <span class="review-author">Елена В.О.</span>
+                <span class="review-stars">⭐⭐⭐⭐</span>
+            </div>
+            <p class="review-date">10.09.2026</p>
+            <p class="review-text">футболка супер, но слегка просвеечивает</p>
+        </div>
+    </section>
+</main>
+</body>
+</html>
